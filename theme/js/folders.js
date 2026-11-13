@@ -24,7 +24,7 @@ import * as TS from './trackstore.js';
 
 const AUDIO = /\.(flac|mp3|m4a|m4b|mp4|aac|ogg|oga|opus|wav|wv|ape|aiff?|dsf|dff|mpc|tak|tta|wma|mka|alac|caf|spx|ofr|ofs)$/i;
 const SEP = /[\\/]+/;
-const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+const collator = new Intl.Collator("en", { numeric: true, sensitivity: 'base' });
 const lc = (s) => String(s || '').toLowerCase();
 const yearOf = (d) => (String(d || '').match(/\d{4}/) || [''])[0];
 const kHz = (r) => (r ? (r / 1000).toFixed(1).replace('.0', '') + $t(' кГц') : '');
